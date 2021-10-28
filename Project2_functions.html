@@ -7,9 +7,16 @@
 <p id = "p1"> </p>
 
 <script>
+    var age = myfunction(23, 32) ;
+   //23 my  age  32 piotr age 
+    document.getElementById("p1").innerHTML = age;
 
-        var a= 23, b= 32; //23 my  age  32 piotr age 
-    document.getElementById("p1").innerHTML = a + b ;
+    function myfunction (a, b) {
+        return a+=b;
+    }
+
+
+  
 
 </script>
 
