@@ -2,7 +2,7 @@
 function addition_Function (){
     var addition = 2 + 2 ;
     document.getElementsById ("Dictionary") .innerHTML = "2 + 2 =" + addition ;
-} 
+}  ;
 
     function substraction_Function (){
     var substraction= 2 - 2 ;
