@@ -1,5 +1,11 @@
 
-    function more_Math(){
-    var simple_Math= (2 + 2) * 10 / 4 -3 ;
-    document.getElementsById ("Math") .innerHTML = "2 plus 2, multiplied by 10, divided by 4 and then substract by 3 " + simple_Math;
-}
+function my_Family () {
+    var daughter = {
+     firstname: "Victoria" ,
+     age: 9 ,
+     eyes: "blue" , 
+     hair :"blond"
+ };
+delete daughter.age ; // deleted element displayed undefined
+ document.getElementById ("Family").innerHTML = daughter.firstname + " is " + daughter.age  + " weeks old and She have " + daughter.eyes + " eyes and " + daughter.hair + " hair. She is beauty!" ;
+ }
