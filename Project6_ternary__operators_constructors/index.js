@@ -1,9 +1,9 @@
 //tenary
 function aqua_function() {
     var height, access;
-    height = document.getElementById ("access").value ; 
-    access = (height<160) ? "You are too short" : "You are tall enough" ;
-    document.getElementById ("height").innerHTML = access + "inside." ; 
+    height = document.getElementById ("height").value ; 
+ if  (height<160) ? "You are too short" : "You are tall enough" ;
+    document.getElementById ("access").innerHTML =  + "inside." ; 
 }
 // new and this
 function candidate (age, occupation, relationship ) {
@@ -20,7 +20,7 @@ function  myFunction() {
 
     //nested
 function count_function() {
-    document.getElementById ("Counting").innerHTML = count() ; 
+    document.getElementById ("counting").innerHTML = count() ; 
 function count (){
             var first_person = 1; 
             function one_more() { first_person += 1; }
