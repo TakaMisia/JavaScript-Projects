@@ -23,3 +23,8 @@ function over18 (age){
 //date 
 const s = new Date();
 document.getElementById("datecheck").innerHTML = s.getTime();
+
+//time 
+function time_function() {
+  alert('Hi you see that because i used time function to displayed communicate 1s later.');
+}
