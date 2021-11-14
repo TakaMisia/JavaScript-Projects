@@ -6,7 +6,7 @@ function function_inside() {
 // outside
   var a = 23;
  b = 1
-function_outside();
+function_outside(23,1);
 
 function function_outside() {
   document.getElementById("outside").innerHTML = a * b ;
@@ -27,4 +27,18 @@ document.getElementById("datecheck").innerHTML = s.getTime();
 //time 
 function time_function() {
   alert('Hi you see that because i used time function to displayed communicate 1s later.');
+}
+function time_function() {
+  var time = new Date ().getHours();
+  var Reply;
+  if (time < 12 == time > 0) {
+    Reply = "Good morning!";
+  }
+  else   if (time > 12 == time < 18) {
+    Reply = "Good afternoon!";
+  }
+  else {
+    Reply = "good night";
+  }
+  document.getElementById("timecheck").innerHTML= Reply ;
 }
