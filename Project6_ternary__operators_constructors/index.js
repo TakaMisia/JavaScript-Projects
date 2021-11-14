@@ -1,10 +1,15 @@
 //tenary
 function aqua_function() {
-    var height, access;
-    height = document.getElementById ("height").value ; 
- if  (height<160) ? "You are too short" : "You are tall enough" ;
-    document.getElementById ("access").innerHTML =  + "inside." ; 
+    var age = document.getElementById ("answer").value ; 
+    let answer ;
+ if ( age  < 16) {
+answer =  "You are too young." ;
+ } else {
+ answer =  "Come in and enjoy!";
 }
+}
+document.getElementById ("answer").innerHTML = answer;
+
 // new and this
 function candidate (age, occupation, relationship ) {
     this.candidate_age = age;

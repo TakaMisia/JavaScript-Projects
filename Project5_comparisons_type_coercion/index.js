@@ -34,3 +34,6 @@ function not_function(){
 function not_function(){
     document.getElementById ("not") .innerHTML = !(20>10);   // return true
 }
+//ternary opration 
+document.write(Bigger = (5>1) ? "Left number is bigger" : "Right number is bigger"); 
+// true 
