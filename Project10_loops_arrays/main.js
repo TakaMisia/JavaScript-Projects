@@ -1,23 +1,23 @@
 //while loop
-function loop_1 () {
+function loop_1() {
     var Z = "" ;
     var Y = 1 ;
     while  (Y < 51 ) {
 Z += "<br>" + Y ; 
 Y++;
  }
- document.getElementById("loop").innerHTML = Z;
+ document.getElementById("loop_1").innerHTML = Z;
 }
 
 //for loop
 var  storage = ["tomato " , "salate " , "onion " , "pepers " , "aspaagus "] ;
 var content = "" ; 
 var Y ;
-function for_loop () {
+function for_loop() {
 for (Y = 0; Y < storage.length; Y++) {
   content += storage[Y] ;
 }
-  document.getElementById("myfridge").innerHTML = content;
+  document.getElementById("for_loop").innerHTML = content;
 }
 //arrays
 function my_daughter() {
@@ -32,8 +32,21 @@ document.getElementById ("daughter").innerHTML = "You will see moments of my dau
 }
 //constant
 function constant() {
-  const telephone = {type : "phone", brand:"Samsung", moodel: "S20", color:"blue" };
+  let telephone = {type : "phone", brand:"Samsung", model: "S20", color:"blue" };
   telephone.color = "black" ;
   telephone.price = "1200$" ; 
-  document.getElementById ("constant").innerHTML = "New" + telephone.type +  "cost" + telephone.price + "we talking about" + telephone.brand + telephone.moodel + "-it is good price."
+  document.getElementById ("constant").innerHTML = "New" + telephone.type +  "cost" + telephone.price + "we talking about" + telephone.brand + telephone.model + "-it is good price."
 }
+//object with let 
+function dog () {
+  let  Animal = {
+      Species: "Dog",
+      Color: "brown",
+      Breed: "Husky",
+      Age: 1,
+      Sound: "waw waw!",
+      return : "This is my favvorite breed : " + this.Color + this.Breed ,
+  }
+  } ;
+
+

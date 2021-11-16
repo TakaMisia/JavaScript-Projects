@@ -6,7 +6,7 @@ function function_inside() {
 // outside
   var a = 23;
  b = 1
-function_outside(23,1);
+function_outside();
 
 function function_outside() {
   document.getElementById("outside").innerHTML = a * b ;
@@ -40,5 +40,17 @@ function time_function() {
   else {
     Reply = "good night";
   }
-  document.getElementById("timecheck").innerHTML= Reply ;
+  document.getElementById("timecheck").innerHTML=Reply ;
 }
+var X = 23;
+document.write (X) ; 
+{
+  let X = 33;
+  document.write("<br>" + X) ; 
+}
+document.write ("<br>" + X);
+//return function 
+function return_Function(name) {
+  return "welcome to the world " + name;
+}
+document.getElementById("return").innerHTML = return_Function("Victoria");
