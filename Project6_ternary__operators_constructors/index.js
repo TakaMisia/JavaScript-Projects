@@ -7,8 +7,15 @@ answer =  "You are too young." ;
  } else {
  answer =  "Come in and enjoy!";
 }
-}
 document.getElementById ("answer").innerHTML = answer;
+}
+//if
+function time_function() {
+if (new Date().getHours() < 12) {
+  }
+  document.getElementById("time").innerHTML = "Good afternoon!";
+
+}
 
 // new and this
 function candidate (age, occupation, relationship ) {
