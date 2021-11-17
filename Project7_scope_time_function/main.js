@@ -1,18 +1,23 @@
+function_inside() ;
+
 function function_inside() {
-    let c = 4;
-    document.getElementById("inside").innerHTML =a * a ;
+    let name = "Misia";
+    document.getElementById("inside").innerHTML = typeof name + " " + name ; 
   }
   
 // outside
-  var a = 23;
- b = 1
-function_outside();
+var Dogname = "Lucky";
+myFunction();
 
-function function_outside() {
-  document.getElementById("outside").innerHTML = a * b ;
-} 
+function myFunction() {
+    document.getElementById("outside").innerHTML =
+      typeof Dogname + "- " + "My dog name's " + Dogname;
+}
 
-//if statement
+document.getElementById("outside1").innerHTML =
+   typeof Dogname + "- " + "My dog name is " + Dogname; 
+
+
 function over18 (age){
   var ans="You cant go inside";
   if(age>=18){
