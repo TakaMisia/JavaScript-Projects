@@ -17,7 +17,7 @@ function Input_Digit(digit) {
     //WE ARE CHCKING TO SEE if wait_second_operand is true and set
     //display_vallue to the key that was clicked
     if (Wait_Second_Operand === true) {
-        Calculator.Display_Value  digit;
+    Calculator.Display_Value = digit ; 
         Calculator.Wait_Second_Operand = false;
     } else {
         // this overwrttes displayed-value if the current value is 0
@@ -58,13 +58,17 @@ function Handles_Operator(Next_Operator) {
     //in  the perform_calculation object and thw function that matches the
     //operator is executed
     let result = Perform_Calculation[operator] ( Value_Now, Value_of_Input)
-//here we ad a fixed amoount of numbers after decimal 
-result = Number(result).toFixed(9)
-//this will removee any trailing 0's
-result = (result * 1).toString()
-Calculator.Wait_Second_Operand = true;
-Calculator.operator = Next_Operator; 
-}
+    //here we ad a fixed amoount of numbers after decimal 
+    result = Number(result).toFixed(9)
+    //this will removee any trailing 0's
+    result = (result * 1).toString()
+    Calculator.Display_Value = parseFloat(result) ; 
+    Calculator.First_Operand = parseFloat(result) ; 
+    } 
+
+    Calculator.Wait_Second_Operand = true;
+    Calculator.operator = Next_Operator; 
+    }
 const Perform_Calculation = {
     '/':(First_Operand, Second_Opeand) => First_Operand / Second_Opeand,
     '*':(First_Operand, Second_Opeand) => First_Operand * Second_Opeand,
@@ -72,7 +76,7 @@ const Perform_Calculation = {
     '-':(First_Operand, Second_Opeand) => First_Operand - Second_Opeand,
     '=':(First_Operand, Second_Opeand) =>  Second_Opeand
 };
-function Calculator.Reset() {
+function Calculator_Reset() {
     Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
@@ -81,15 +85,20 @@ function Calculator.Reset() {
 //this function updates the screen with the contents od dispalu_value
 function Update_Display() {
     const display = document.querySelector('.calculator_keys') ;
-     MediaKeySession.addEventListener ('click', (event) => {
+    display.value = Calculator.Display_Value ; 
+}
+Update_Display() ;
+//this section monitors button clicks 
+const keys = document.querySelector('.calculator-keys');
+     keys.addEventListener('click', (event) => {
          //the target vairiable is an represent the element
          // that was clicked
-         const{ target } = event;
+         const { target } = event;
          // if the element tht was cliicked on thi button, exit the functon 
          if(!target.matches('button')) {
              return;
          }
-         if (target.classList. contains ('operator')) {
+         if (target.classList.contains ('operator')) {
              Handles_Operator(target.value) ; 
              Update_Display() ;
              return;
