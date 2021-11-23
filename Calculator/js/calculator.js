@@ -64,8 +64,8 @@ function Handles_Operator(Next_Operator) {
     result = (result * 1).toString()
     Calculator.Display_Value = parseFloat(result) ; 
     Calculator.First_Operand = parseFloat(result) ; 
-    } 
 
+    } 
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator; 
     }
@@ -89,7 +89,7 @@ function Update_Display() {
 }
 Update_Display() ;
 //this section monitors button clicks 
-const keys = document.querySelector('.calculator-keys');
+const keys = document.querySelector('.calculator_keys');
      keys.addEventListener('click', (event) => {
          //the target vairiable is an represent the element
          // that was clicked
