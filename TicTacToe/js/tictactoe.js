@@ -13,16 +13,16 @@ let select = document.getElementById(squareNumber) ;
     //This condition checks who's turn it is. 
 if (activePlayer === 'X') {
     //If activePlayer is equal to 'X', the x.png is placed HTML. 
-select.style.backgroundImage = 'url ("images/x.jpg")';
+select.style.backgroundImage = "url('images/x.jpg')";
     //Active player may only be 'X' or 'o' so, if not 'X' it must be 'o'
 }else { 
     //If activePlayer is equal to 'O', the o.png is placed in HTML.
-select.style.backgroundīmage = 'url ("images/o.jpg")' ;
+select.style.backgroundīmage = "url('images/o.jpg')";
 }
     //squareNumber and activePlayer are concatenated together and added to array. 
 selectedSquares.push (squareNumber + activePlayer); 
     //This calls a function to check for any win conditions. 
-checkWinConditions ();
+    checkWinconditions ();
     //This condition is for changing the active player.
 if (activePlayer === 'X') {
     //If active player is 'X' change it to 'O'. 
@@ -76,40 +76,40 @@ success = true;
     // drawwinLine function is called to draw line if condition is met.
 function checkWinconditions () {
         // x 0, 1, 2 condition.
-    if (arrayIncludes ('0X', '1X', '2X')) { drawwinLine (50, 100,558, 100);}
+    if (arrayIncludes ('0X', '1X', '2X')) { drawWinLine (50, 100,558, 100);}
         // X 3, 4, 5 condition.
-    else if (arrayIncludes ( '3X', '4X', '5X')) { drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ( '3X', '4X', '5X')) { drawWinLine (50, 100,558, 100);}
         //X 6, 7, 8 condition.
-    else if (arrayIncludes ('6X', '7X', '8X')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('6X', '7X', '8X')){ drawWinLine (50, 100,558, 100);}
         //X 0, 3, 6 condition. 
-    else if (arrayIncludes ('0X', '3X', '6X')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('0X', '3X', '6X')){ drawWinLine (50, 100,558, 100);}
         //X 1 4 7 condition. 
-    else if (arrayIncludes ('1X', '4X', '7X')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('1X', '4X', '7X')){ drawWinLine (50, 100,558, 100);}
         //X2 5 8 condition. 
-    else if (arrayIncludes ('2X', '5X', '8X')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('2X', '5X', '8X')){ drawWinLine (50, 100,558, 100);}
         //X  6  4 2 condition. 
-    else if (arrayIncludes ('6X', '4X', '2X')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('6X', '4X', '2X')){ drawWinLine (50, 100,558, 100);}
         //X 0, 4 8 condition. 
-    else if (arrayIncludes ('0X', '4X', '8X')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('0X', '4X', '8X')){ drawWinLine (50, 100,558, 100);}
 
         // O 0, 1, 2 condition.
-    if (arrayIncludes ('0O', '1O', '2O')) { drawwinLine (50, 100,558, 100);}
+    if (arrayIncludes ('0O', '1O', '2O')) { drawWinLine (50, 100,558, 100);}
         // O 3, 4, 5 condition.
-    else if (arrayIncludes ( '3O', '4O', '5O')) { drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ( '3O', '4O', '5O')) { drawWinLine (50, 100,558, 100);}
         //O6, 7, 8 condition.
-    else if (arrayIncludes ('6O', '7O', '8O')){ drawwinLine (50, 100,558, 100);}
-    else if (arrayIncludes ('0O', '3O', '6O')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('6O', '7O', '8O')){ drawWinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('0O', '3O', '6O')){ drawWinLine (50, 100,558, 100);}
         //O 1 4 7 condition. 
-    else if (arrayIncludes ('1O', '4O', '7O')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('1O', '4O', '7O')){ drawWinLine (50, 100,558, 100);}
         //O2 5 8 condition. 
-    else if (arrayIncludes ('2O', '5O', '8O')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('2O', '5O', '8O')){ drawWinLine (50, 100,558, 100);}
         //O  6  4 2 condition. 
-    else if (arrayIncludes ('6O', '4O', '2O')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('6O', '4O', '2O')){ drawWinLine (50, 100,558, 100);}
         //O 0, 4 8 condition. 
-    else if (arrayIncludes ('0O', '4O', '8O')){ drawwinLine (50, 100,558, 100);}
+    else if (arrayIncludes ('0O', '4O', '8O')){ drawWinLine (50, 100,558, 100);}
         // This condition checks for tie. none of the above conditions register 
         //and 9 squares are selected, the code executes. 
-    else if (selectedsquares.length >= 9) { 
+    else if (selectedSquares.length >= 9) { 
         //This function plays the tie game sound.
     audio('media/tie.mp3');
         // This function sets a ,3 second timer before the resetGame is called. 
@@ -124,7 +124,7 @@ function checkWinconditions () {
     const c=  selectedSquares.includes (squareC); 
         // if the 33 variables we pas are included in our array true is
         //returned and our else if condition executes the function. 
-    if (a  === true && b === true && C === true) { return true; }
+    if (a  === true && b === true && c === true) { return true; }
     }
     }
 
@@ -135,6 +135,7 @@ function disableclick () {
 body.style.pointerEvents =  'none' ;
     //This makes our body clickable again after 1 second. 
 setTimeout (function () { body.style.pointerEvents = 'auto';} , 1000);
+}
     //This function takes a string parameter of the path you set earlier
     //placement sound ('./media/place.mp3') 
 function audio (audioURL) { 
@@ -153,15 +154,15 @@ function drawWinLine (coordX1, coordYl, coordX2, coordY2) {
      //This line indicates where the start of a lines x axis is. 
      let xl = coordX1, 
      //This line indicates where the start of a lines y axis is.
-      yl = coordY1, 
+      yl = coordX1, 
       //This line indicates where the end cf a lines x axis is.
-       x2 = coordx2, 
+       x2 = coordX2, 
        //This line indicates where the end of a lines x axis is.
         y2 = coordY2, 
         //This variable stores temporary x axis data we update in our animation loop. 
-        X = x1, 
+        x = x1, 
         //This variable stores temporary y axis data we update in cur animation loop. 
-        Y= y1; 
+        y= y1; 
         //This function interacts with the cavnas 
         function animateLineDrawing () { 
             //This variable creates the loop for when the game ends it restarts. 
@@ -173,13 +174,13 @@ function drawWinLine (coordX1, coordYl, coordX2, coordY2) {
             //This method moves us to a sgtarting point for our line.
              c.moveTo (x1, y1); 
              //This method indicates the end point in our line. 
-             C.lineTo (x, y); 
+             c.lineTo (x, y); 
              //This method set the width of our line. 
              c.lineWidth = 10; 
              //This method sets the color Cf our line.
-              C.strokeStyle = 'rgba(70, 255, 33, .8)';
+              c.strokeStyle = 'rgba(70, 255, 33, .8)';
               //This method draws everything we laid out above.
-               C.stroke (); 
+               c.stroke (); 
                //This condition checks if we' ve reached the endpoint. 
                if (x1 <= x2 && yl <= y2) { 
                    //This condition adds 10 to the previcus end x point. 
@@ -187,7 +188,7 @@ function drawWinLine (coordX1, coordYl, coordX2, coordY2) {
                     //This condition adds 10 to the previous end y point. 
                     if (y < y2) { y += 10; }
                         //This condition cancels our animation 1ocp if reach the end points. 
-                        if (x >=x2 &&  y >= y2) { cancelAnimationFrame(animationLoop) ; }
+                        if (X >=x2 &&  y >= y2) { cancelAnimationFrame(animationLoop) ; }
                         }
                 
  //This condition is similar to the one above. 
@@ -210,7 +211,7 @@ if (x < x2) {x += 10; }
      //This line disallowS clicking while the win scund is playing 
      disableclick(); 
      //This line plays the win sounds.
-      audio('./media/winGame.mp3');
+      audio('media/winGame.mp3');
        //This line calls our main animation loop. 
        animateLineDrawing (); 
        //This line waits 1 second. 
@@ -229,3 +230,4 @@ function resetGame () {
     }
           //This resets our array so it is empty and we can start over. 
           selectedsquares = [] ; 
+}
