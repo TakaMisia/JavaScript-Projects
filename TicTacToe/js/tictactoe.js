@@ -17,7 +17,7 @@ select.style.backgroundImage = "url('images/x.jpg')";
     //Active player may only be 'X' or 'o' so, if not 'X' it must be 'o'
 }else { 
     //If activePlayer is equal to 'O', the o.png is placed in HTML.
-select.style.backgroundīmage = "url('images/o.jpg')";
+select.style.backgroundīmage = "url('images/O.jpg')";
 }
     //squareNumber and activePlayer are concatenated together and added to array. 
 selectedSquares.push (squareNumber + activePlayer); 
@@ -146,15 +146,15 @@ audio.play ();
 }
 //part 7
 //This function utilizes html canvas to draw win 1ines. 
-function drawWinLine (coordX1, coordYl, coordX2, coordY2) { 
+function drawWinLine (coordX1, coordY1, coordX2, coordY2) { 
     //This line accesses our html canvas element 
     const canvas = document.getElementById('win-lines'); 
     //This line gives us access to methods and propertie s to use on canvas 
     const c = canvas.getContext('2d');
      //This line indicates where the start of a lines x axis is. 
-     let xl = coordX1, 
+     let x1 = coordX1, 
      //This line indicates where the start of a lines y axis is.
-      yl = coordX1, 
+      y1 = coordX1, 
       //This line indicates where the end cf a lines x axis is.
        x2 = coordX2, 
        //This line indicates where the end of a lines x axis is.
@@ -182,18 +182,18 @@ function drawWinLine (coordX1, coordYl, coordX2, coordY2) {
               //This method draws everything we laid out above.
                c.stroke (); 
                //This condition checks if we' ve reached the endpoint. 
-               if (x1 <= x2 && yl <= y2) { 
+               if (x1 <= x2 && y1 <= y2) { 
                    //This condition adds 10 to the previcus end x point. 
                    if (x < x2) { x +=10; }
                     //This condition adds 10 to the previous end y point. 
                     if (y < y2) { y += 10; }
                         //This condition cancels our animation 1ocp if reach the end points. 
-                        if (X >=x2 &&  y >= y2) { cancelAnimationFrame(animationLoop) ; }
+                        if (x>=x2 &&  y >= y2) { cancelAnimationFrame(animationLoop) ; }
                         }
                 
  //This condition is similar to the one above. 
  //It was necessary for the 6, 4, 2 win condition. 
- if (x1 <= x2 && yl >= y2) { 
+ if (x1 <= x2 && y1 >= y2) { 
 if (x < x2) {x += 10; }
  if (y > y2) { y -= 10;}
      if (x >= x2 && y <= y2) { cancelAnimationFrame (animationLoop); }
@@ -229,5 +229,5 @@ function resetGame () {
           square.style.backgroundImage =''; 
     }
           //This resets our array so it is empty and we can start over. 
-          selectedsquares = [] ; 
+          selectedSquares = [] ; 
 }
