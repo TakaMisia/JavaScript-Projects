@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>jquary practise </title>
 </head>
+<body>
 
- <script>
- $(document).ready(function(){
- "<body>\ 
- //slash means next line
-	<div id= 'container'>\ //just one quotation mark because if we use double we will closebody tag.
-		<div id='inner'>\
-			<h1> Basic jQuery</h1>\
-				<p id = '1'> Paragraph 1</p>\
-				<p id = '2'> Paragraph 2</p>\
-				<p id = '3'> Paragraph 3</p>\
-		</div>\
-	</div>\
-</body>"
-	);
-	$ ("2").css({"color":"red"});
-	$("#3").click(function() {
-		$('h1').hide();
-	});
-	
- </script>
- </body>
+
+    <script>
+		 $(document).ready(function(){
+				 $("html").append(
+				 "<body>  
+				 //double " 
+					<div id= 'container'>\ 
+						<div id='inner'>\
+							<h1> Basic jQuery</h1>\
+								<p id = '1'> Paragraph 1</p>\
+								<p id = '2'> Paragraph 2</p>\
+								<p id = '3'> Paragraph 3</p>\
+						</div>\
+					</div>\
+				</body>"
+				);
+				$ ("2").css({"color":"red"});
+				$("#3").click(function() {
+					$('h1').hide();
+				});
+      //Optional
+            $("#1").fadeOut(750).fadeIn(750);
+    </script>
+</body>
 </html>
