@@ -1,0 +1,449 @@
+/*****style  portfolio *****/
+
+/*to all  */
+html {
+    scroll-behavior: smooth; 
+}
+
+/* Body */
+
+body {
+    margin: 1%; 
+    opacity: 1; /* opacity and transition affect the page loading fade  effect */
+    transition: 2s opacity; /* 2 second fade in */
+    letter-spacing: .2vw; 
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw; 
+    overflow-x: hidden; 
+    user-select: none; 
+    background-color: rgb(3, 3, 3);
+}
+
+/* fade effect */
+body.fade-out {
+    opacity: .1; /* level of opacity  */
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase; 
+    font-family: "Optima"; 
+    text-align: center; 
+    margin-top: 1%; 
+    color: silver; 
+}
+
+/* Heading 1 element hover effect */
+h1:hover {
+    transform: scale(1.5); /* increase in size by 1.7 */
+    transition: transform 2s; /* transformation to last 2 second */
+
+}
+
+/* title text */
+.purple-text {
+	 font-family: Verdana ;
+	 font-style: oblique;
+    color: purple;/*color portfolio title text */
+
+}
+
+/* p elements */
+p {
+    font-style: italic; 
+    text-align: left; /* left side */
+    letter-spacing: 1px; /* text slightly */
+    font-size: 20px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+/* p hover effect */
+p:hover {
+    transition: transform 3s; /* transform effect last 3s.  */
+	transform: scale(1.1); /* increase slightly in size  */
+}
+
+
+/* head class */
+.head {
+    text-align: center; 
+    background-color: rgb(26, 183, 204);
+    background: linear-gradient(to bottom, rgb(26, 183, 204), rgb(190, 0, 207));
+}
+
+.head:hover {
+    transition: transform 2s; 
+    transform: scale(1.2); 
+}
+
+/* Center class */
+.center {
+     text-align: center; /*  centering the text */ 
+}
+
+/* Center class hover effect etc.q, github link, and footer */
+.center:hover {
+    transition: transform 2s; /*  transform effect  2s */
+    transform: scale(1.2); /* increase in size by 1.2 when hovered over */
+}
+
+/* a elements */
+a {
+    color: rgb(217, 240, 14); /* all links */
+    cursor: pointer; /*  all links change the mouse to a pointer  to red  */
+    text-decoration: underline; /* all links are underlined */
+}
+
+/* q elements */
+q {
+    font-style: italic; 
+    font-weight: bolder;
+
+}
+
+
+/* footer element */
+.academy  {
+    text-align:right;
+}
+.academy :hover {
+    transition: transform 2s; /*  transform effect  2s */
+    transform: scale(1.2); /* increase in size by 1.2 when hovered over */
+}
+/* Image elements */
+img {
+    border-radius:  25px; /* rounded corners */
+    max-width: 80%; /* Ensures all images stay within the width of their container */
+    display: center; /* display center  */
+    margin-left: 200px; 
+	margin-top: 10px;
+    border: 3px solid rgb(14, 2, 2);
+}
+
+/* Image element hover effects */
+img:hover {
+    transition: transform 1s; /* Transition lasts 1 second */
+	transform: scale(1.2); /* increased slightly when hovered over */
+}
+
+
+
+/*footer element */
+footer {
+    padding: 1%; 
+    background: linear-gradient(to bottom, rgb(26, 183, 204), rgb(190, 0, 207));
+
+}
+/***** End style main*****/
+
+/***** nav style *****/
+.Navbar {
+    overflow: hidden; 
+    background-color: rgb(190, 0, 207); 
+    background: linear-gradient(to right,   rgb(26, 183, 204),rgb(190, 0, 207));
+    position: block; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1; 
+    animation: moveNav 2s; 
+}
+
+/* moveNav animation effect */
+@keyframes moveNav {
+    from {left: -100vw;} 
+    to {left: 0vw;} 
+}
+
+/* Navbar links */
+.Navbar a {
+    float: left; 
+    display: block; 
+    color: white; 
+    padding: 10px 16px; 
+    text-decoration-style: solid;
+    font-family: Avant Garde, Helvetica; 
+    font-size: 20px; 
+    text-align: center; 
+    position: relative; 
+    -webkit-animation: moveNavText 1s; 
+    animation: moveNavText 1s; 
+}
+
+@keyframes moveNavText {
+    from {left: -100vw;} 
+    to {left: 0vw;} 
+}
+
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; 
+        font-size: 12px;
+    }
+}
+
+
+.Navbar a:hover {
+    background-color: rgb(26, 183, 204); 
+    background: linear-gradient(to right, rgb(26, 183, 204), rgb(190, 0, 207));
+    color: black; 
+    font-weight: bold; 
+}
+
+
+/***** end nav style *****/
+
+/*Slideshow Styling */
+#Slideshow_Background {
+    background: linear-gradient(to right, rgb(26, 183, 204), rgb(190, 0, 207));
+}
+
+.mySlides{
+    display: none; 
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+    width: 40%; 
+    height: auto; /*  height is automatically adjusted based on the content it is displaying */
+    padding-top: 5%;
+    position: relative; 
+    margin: 0; /*  horizontally center the container on the page */
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+    color: black; 
+    font-weight: bold; 
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+    vertical-align: left; 
+    height: auto; 
+    width: 100%; 
+    margin-bottom: 80px;
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer; 
+    position: absolute; /*  next and previous buttons positioned relative*/
+    top: 50%; /*  buttons in the middle */
+    width: auto; /*  width of the buttons is automatically adjust*/
+    padding: 7%; 
+    color:  rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius:  25px; /* rounded corners */
+    user-select: none;
+    transition: 0.6s ease; 
+}
+
+/* Position next botton */
+.Next {
+    left: 120%; /* moves the next button to the right side of the slideshow container */
+    border-radius:  25px; /* rounded corners */
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgb(255, 255, 255); 
+}
+
+/* Slideshow text */
+.text {
+    color: black; 
+    padding: 10%;
+    left: 120%;
+    margin:  90px;
+    position: absolute;
+    bottom: 3px; 
+    width: 100%; 
+    text-align: center; 
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 40px;  
+    font-weight: bolder;
+    background: linear-gradient(to left, rgb(10, 31, 216), rgb(233, 11, 114));
+    border-radius:  25px; /* rounded corners */
+}
+
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; 
+    height: 1%; 
+    width: 2%;
+    margin: 1%; 
+    padding-bottom: 3%;
+background-color: rgb(233, 11, 114);    border-radius: 100%;
+    display: inline-block; 
+    transition: background-color 0.6s ease; 
+    z-index: 1; /* dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: rgb(255, 255, 255); 
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; 
+    animation-duration: 2s; 
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+
+@keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
+
+
+* { 
+    box-sizing: border-box; 
+} 
+
+.Column_1 {
+    float: left;
+    width: 40%; 
+    padding: 10px;
+    padding-top: 3%;
+    height: 600px; 
+    background-color: rgb(190, 0, 207); 
+    background: linear-gradient(to right, rgb(26, 183, 204), rgb(190, 0, 207));
+}
+
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+	color: black;
+    float: left;
+    width: 60%;
+    padding: 10px;
+    padding-top: 5%;
+    height: 600px;
+    background-color: rgb(26, 183, 204);
+    background: linear-gradient(to right,  rgb(190, 0, 207), rgb(26, 183, 204));
+
+}
+
+
+/*  is applied to the columns in the final row */
+.Column_tall {
+    padding-top: 5%;
+    height: 550px;
+}
+
+/* This inserts something after the content of selected elements */
+.Row:after {
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+/***** end nav style*****/
+
+/***** Contact Form Styling *****/
+
+.Pop_Up_Button {
+    position:relative; 
+    bottom: 3%; 
+    right: 2%w; 
+    width: 25%; 
+    margin:2%;
+    background-color: rgb(253, 17, 194); 
+    color: black; 
+    border: solid black; 
+    border-radius: 5%;
+    cursor: pointer; /*  changes the cursor when hovered over the button to a pointer */
+    animation: movePopup 5s; 
+}
+
+/* movePopup animationon 
+@keyframes movePopup {
+    from {right: 10px;} 
+    to {left: 95% ;}
+}
+
+/* Styling for the contact form */
+.form-popup {
+    color: rgb(0, 0, 0);
+    z-index: 8; /*  z-index ensures the contact form shows above all other elements on the page */
+    display: none; 
+    position: fixed; 
+    bottom: .5vw; 
+    right: .5vw; 
+}
+
+/* Form styling */
+.form-container {
+    max-width: 49vw; /* Relative sizing*/
+    padding: 1vw; 
+    background-color: rgb(26, 183, 204);
+}
+
+/* Input fields */
+.form-container input[type=text] {
+    width: 100%; 
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0; 
+    border: none; 
+    background-color: rgb(247, 210, 250); 
+    color: rgb(0, 0, 0);
+    font-size: 20px; /* Relative font sizing based on the width of the viewport */
+}
+
+/* General styling for all buttons */
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw; /* Adds slight spacing between the letters */
+    font-size: 1.5vw; /* Relative sizing of text */
+    font-weight: bold; 
+    padding: 1.5vw; /* Adds padding to the text in the button */
+    cursor: pointer; /* Changes the cursor to pointer over button elements */
+    width: 100%; 
+    height: auto; /* Allows the height to be resized depending on the content showing */
+}
+
+/* Hover effect for contact and submit buttons */
+button:hover, .form-container .btn:hover {
+    color: white; /* This makes the text in the buttons white when hovered over */
+    background-color: rgb(190, 0, 207); 
+    transition-duration: 1s; /*  makes the transition last 1 second */
+}
+
+/* Submit button */
+.form-container .btn {
+    background-color: rgb(248, 248, 248); 
+    color: rgb(3, 3, 3);
+    border-color: black;
+    margin-bottom: 1vh; /* Adds space between the submit button and the close button */
+}
+
+/* Close button */
+.form-container .cancel {
+    background-color: rgb(26, 183, 204);
+    color: rgb(7, 7, 7);
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+/***** End of Contact Form Styling *****/
+
